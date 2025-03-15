@@ -1,0 +1,163 @@
+
+/* resets & boilerplates */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    
+    /* outline: solid 2px rgb(200 10 50 / .2); */
+}
+
+img,
+iframe,
+video {
+    max-width: 100%;
+
+    display: block;
+}
+
+
+
+html {
+    height: 100svh;
+}
+body,
+main {
+    min-height: 100%;
+
+}
+
+/* h1, h2, h3, h4, h5, h6 {
+    text-wrap-style: balance;
+} */
+
+p {
+    max-inline-size: 75ch;
+    text-wrap-style: pretty;
+}
+
+/* overall layouts */
+
+body {
+
+    background-color: var(--clr-neutral-black);
+    color: var(--clr-neutral-light-grey);
+}
+
+body,
+input {
+    font-family: rubik, sans-serif;
+    font-weight: 400;
+}
+
+.wrapper {
+    
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+
+
+
+
+
+
+/* utilities */
+
+
+.flex {
+    display: flex;
+}
+
+.grid {
+    display: grid;
+}
+
+
+
+.attribution {
+    /* display: none; */
+    position: absolute;
+    top: calc(100% + 5rem);
+    left: 50%;
+    width: 100%;
+    border-radius: 10px;
+    transform: translateX(-50%);
+    text-align: center;
+    font-size: .75rem;
+    padding: .5em 1.5em;
+
+    line-height: 1.6em;
+    letter-spacing: .1em;
+    color: var(--clr-neutral-light-grey);
+    background-color: transparent;
+
+    a {
+
+        color: var(--clr-primary-green);
+        text-decoration: none;
+
+        &:hover {
+            color: var(--clr-primary-orange);
+            text-decoration: underline;
+        }
+    }
+
+}
+
+
+.responsive-container {
+    position: relative;
+    height: 95vh;
+    width: 95vw;
+    resize: both;
+    margin-top: 1rem;
+    border: 1px solid lime;
+    overflow: auto;
+
+    
+
+    box-shadow: 0 0 20px -2px black;
+
+    &.no-border {
+        border: none;
+    }
+
+    .dimensions-toast {
+        display: block;
+        position: absolute;
+        top: 1rem;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 10;
+
+        font-size: .75rem;
+        font-weight: 500;
+        letter-spacing: .05em;
+
+        color: #444;
+
+        background-color: whitesmoke;
+        background-image: linear-gradient(rgba(0, 255, 0, .1), rgba(0, 255, 0, .1));
+        box-shadow: 0 0 15px -3px rgba(0, 255, 0, .75);
+
+        border: solid 1px rgba(0, 255, 0, 1);
+        border-radius: 999px;
+
+        padding: .3rem 1.5rem;
+
+        &.hidden {
+            display: none;
+        }
+
+        
+
+
+    }
+}
+

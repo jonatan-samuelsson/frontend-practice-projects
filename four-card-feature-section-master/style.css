@@ -1,0 +1,253 @@
+
+:root  {
+  --clr-primary-red: hsl(0, 78%, 62%);
+  --clr-primary-cyan: hsl(180, 62%, 55%);
+  --clr-primary-orange: hsl(34, 97%, 64%);
+  --clr-primary-blue: hsl(212, 86%, 64%);
+  
+  --clr-neutral-grey-500: hsl(234, 12%, 34%);
+  --clr-neutral-grey-400: hsl(212, 6%, 44%);
+  --clr-neutral-white: hsl(0, 0%, 100%);
+
+  /* spacing */
+
+  --space-50: .25rem;
+  --space-100: .5rem;
+  --space-200: 1rem;
+  --space-300: 1.5rem;
+  --space-400: 2rem;
+  --space-500: 2.5rem;
+  
+  
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+img {
+  display: block;
+}
+
+.grey-500 {
+  color: var(--clr-neutral-grey-500);
+}
+.grey-400 {
+  color: var(--clr-neutral-grey-400);
+}
+
+.semibold-heading {
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: .0156rem;
+  line-height: 1.4em;
+
+}
+
+.x-light-heading {
+  font-size: 1.5rem;
+  font-weight: 200;
+  line-height: 1,4em;
+  letter-spacing: .0156rem;
+}
+
+.semibold-heading-small {
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.35em;
+  letter-spacing: 0;
+}
+
+.regular-p {
+  font-size: .9375rem;
+  font-weight: 400;
+  line-height: 1.4em;
+  letter-spacing: 0;
+}
+
+.regular-p-small {
+  font-size: .8125rem;
+  line-height: 1.6em;
+  letter-spacing: 0;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  
+  
+  width: 100vw;
+  
+}
+.intro {
+  padding: calc(1.5 * var(--space-500)) var(--space-50);
+  color: var(--clr-neutral-grey-500);
+  text-align: center;
+  width: min(90%, 19.75rem);
+}
+
+.main-heading {
+  margin-bottom: var(--space-100);
+}
+
+.grid-container {
+  display: grid;
+  gap: 2rem;
+  justify-items: center;
+  align-content: center;
+  width: min(90%, 314px);
+  
+}
+
+.card {
+  text-align: left;
+  padding: var(--space-400);
+  border-radius: 0.625rem;
+  box-shadow: 0 0.3125rem 2.8125rem rgba(50, 50, 50, 0.2);
+  background-color: var(--clr-neutral-white);
+
+  width: min(90%, 19.625rem);
+
+  & h2 {
+    color: var(--clr-neutral-grey-500);
+    margin-bottom: var(--space-100);
+  }
+
+  & p {
+    color: var(--clr-neutral-grey-400);
+    margin-bottom: var(--space-300);
+    }
+
+  & picture {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: var(--space-300);
+  }
+}
+
+.red-card {
+  background-image: linear-gradient(to bottom, var(--clr-primary-red) 0px .25rem, transparent .25rem 100%);
+}
+
+.orange-card {
+  background-image: linear-gradient(to bottom, var(--clr-primary-orange) 0px .25rem, transparent .25rem 100%);
+}
+
+.cyan-card {
+  background-image: linear-gradient(to bottom, var(--clr-primary-cyan) 0px .25rem, transparent .25rem 100%);
+}
+
+.blue-card {
+  background-image: linear-gradient(to bottom, var(--clr-primary-blue) 0px .25rem, transparent .25rem 100%);
+}
+
+footer {
+  position: relative;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  padding: var(--space-200) 0;
+  margin: var(--space-200) 0;
+}
+
+.attribution {
+  font-size: 11px;
+  color: var(--clr-neutral-grey-500);
+  text-align: center;
+  text-wrap-style: pretty;
+  width: 21.875rem;
+  padding: .5em 2.5em;
+  background-color: var(--clr-primary-cyan);
+  border-radius: 15px;
+  border: 2px solid var(--clr-neutral-grey-500);
+
+  & a {
+    color: var(--clr-neutral-grey-400);
+    text-decoration: none;
+
+    &:hover, &:active, &:focus {
+      text-decoration: underline;
+    }
+  }
+}
+
+@media screen and (width >= 41.25rem) {
+
+  .semibold-heading {
+    font-size: 2.25rem;
+    
+  }
+  
+  .x-light-heading {
+    font-size: 2.25rem;
+    
+  }
+
+  .intro {
+    width: 33.75rem;
+  }
+
+  @media screen and (41.25rem <= width < 70rem) {
+    
+  
+
+    .grid-container {
+      grid-template-columns: repeat(4, 1fr);
+      width: 660px;
+    }
+  
+    .card {
+      grid-column-end: span 2;
+
+      &:first-child, &:last-child {
+        grid-column-start: 2;
+      }
+    }
+  }
+
+  @media screen and (width >= 70rem) {
+    
+  
+
+    .grid-container {
+       grid-template-areas: 
+        ". card2 ."
+        "card1 card2 card4"
+        "card1 card3 card4"
+        ". card3 .";
+      grid-template-columns: repeat(3, 1fr);
+     
+      width: 69.625rem;
+    }
+  
+    .card {
+
+      width: 21.875rem;
+
+      grid-column-end: unset;
+      
+      &:first-child {
+        grid-area: card1;
+      }
+      &:nth-child(2) {
+        grid-area: card2;
+      }
+      &:nth-child(3) {
+        grid-area: card3;
+      }
+      &:last-child {
+        grid-area: card4;
+      }
+    }
+  }
+  
+}

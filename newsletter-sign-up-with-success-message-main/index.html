@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Newsletter sign-up form with success message</title>
+  
+  <link rel="stylesheet" href="style.css">
+
+  <script src="main.js" defer></script>
+</head>
+<body>
+<main class="wrapper flex">
+  <article title="Stay updated" class="grid sign-up-card">
+    
+    <picture class="card-img">
+      <source srcset="./assets/images/illustration-sign-up-mobile.svg" media="(max-width: 70rem)">
+      <source srcset="./assets/images/illustration-sign-up-desktop.svg" media="(min-width: 70rem)">
+
+      <img src="assets/images/illustration-sign-up-desktop.svg" alt="graphics-screen-and-browser">
+    </picture>
+    
+
+    
+      <section class="card-content grid">
+        <div class="card-content-section-1 grid">
+          <h1 class="text-preset-1">Stay updated!</h1>
+        
+          <p class="text-preset-2-regular">Join 60,000+ product managers receiving monthly updates on:</p>
+        
+          <ul class="grid">
+            <li class="text-preset-2-regular">Product discovery and building what matters</li>
+            <li class="text-preset-2-regular">Measuring to ensure updates are a success</li>
+            <li class="text-preset-2-regular">And much more!</li>
+          </ul>
+        </div>
+      
+        <div class="card-content-section-2 grid">
+          <form id="sign-up-form" novalidate>
+            <label class="text-preset-3" for="email" id="sign-up-label"><p>Email address</p><p class="error-message" id="error-message" aria-live="polite">Valid email required</p></label>
+            <input type="email" name="email" placeholder="email@company.com">
+            
+          
+            <input class="text-preset-2-bold button" type="submit" value="Subscribe to monthly newsletter" id="sign-up-submit"></input>
+          </form>
+        </div>
+      </div>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="http://jontesamuelsson.se">Jonatan Samuelsson</a>.
+    </div>
+     
+    
+  </article>
+    
+ 
+   
+    
+    
+</main> 
+
+<div class="wrapper flex success" id="success-message">
+    
+      <div class="success-card flex">
+        <div class="success-content flex">
+          <img src="assets/images/icon-success.svg" alt="" class="success-check">
+          <h1 class="text-preset-1">Thanks for subscribing!</h1>
+        
+          <p class="text-preset-2-regular">
+            A confirmation email has been sent to <span class="text-preset-2-bold" id="confirmed-email"></span>. 
+            Please open it and click the button inside to confirm your subscription.
+          </p>
+        </div>
+      
+        <a class="button text-preset-2-bold" id="dismiss-button">Dismiss message</a>
+      </div>
+    
+  </div>
+</body>
+</html>
