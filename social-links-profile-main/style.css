@@ -1,0 +1,122 @@
+:root {
+
+    /* colors */
+
+    --green: hsl(75, 94%, 57%);
+
+    --white: hsl(0, 0%, 100%);
+
+    --grey700: hsl(0, 0%, 20%);
+    --grey800: hsl(0, 0%, 12%);
+    --grey900: hsl(0, 0%, 8%);
+}
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body, main {
+    min-height: 100vh;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    background-color: var(--grey900);
+
+    color: var(--white);
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 100vh;
+}
+
+.social-links-card {
+    display: grid;
+    justify-items: center;
+    text-align: center;
+
+    background-color: var(--grey800);
+    width: clamp(300px, 87%, 375px);
+    padding: 1.5rem;
+    border-radius: 10px;
+
+    .avatar {
+        border-radius: 100%;
+        height: 90px;
+    }
+
+    .profile-info {
+        padding: 1.5rem 0;
+
+        h1 {
+                font-size: 1.5rem;
+                font-weight: 600;
+                letter-spacing: .02em;
+                margin-bottom: .5em;
+            }
+        p {
+            font-size: .9rem;
+            font-weight: 600;
+            color: var(--green);
+        }
+    }
+
+    .profile-desc {
+        font-size: .9rem;
+    }
+
+    .links {
+        display: grid;
+        width: 100%;
+        margin-top: 1.5rem;
+        gap: 1rem;
+
+        .btn {
+            display: block;
+            
+            font-size: .9rem;
+            font-weight: 600;
+            color: var(--white);
+            text-decoration: none;
+            background-color: var(--grey700);
+            padding-block: 1em;
+            border-radius: 5px;
+
+            &:hover, &:active, &:focus {
+                background-color: var(--green);
+                color: var(--grey900);
+            }
+        }
+    }
+   
+} 
+
+
+
+footer {
+    
+    width: 100vw;
+    position: fixed;
+    bottom: 0;
+
+    
+}
+
+.attribution {
+    text-align: center;
+    font-size: .75rem;
+    padding: 1em 0;
+
+    border-image: linear-gradient(to right, transparent 10%, var(--grey700) 20% 80%, transparent 90% 100%) 1;
+    border-top: 2px solid;
+
+    & a {
+        color: var(--green);
+    }
+}

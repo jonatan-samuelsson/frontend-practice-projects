@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Time tracking dashboard</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+
+  <script src="main.js" defer></script>
+</head>
+
+<body>
+  <main class="wrapper flex">
+
+    <div class="grid report-card" id="report-card" data-current-view="Weekly">
+      <div class="grid user-dashboard">
+        <div class="grid user-presentation">
+          <img src="images/image-jeremy.png" alt="Jeremy's avatar">
+          <div class="user">
+            <p class="text-preset-2 pale-blue">Report for</p>
+            <h1 class="text-preset-1">Jeremy Robson</h1>
+          </div>
+        </div>
+
+        <div class="user-menu" role="navigation">
+          <ul class="grid">
+            <li><a class="text-preset-3 user-menu-item">Daily</a></li>
+            <li><a class="text-preset-3 user-menu-item active">Weekly</a></li>
+            <li><a class="text-preset-3 user-menu-item">Monthly</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="grid card work">
+        <div class="category-bg">
+
+        </div>
+        <div class="grid report">
+          <div class="flex category-header">
+            <h2 class="text-preset-3">Work</h2>
+            <a href="#" class="category-menu"><svg width="21" height="5" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" fill="currentcolor" fill-rule="evenodd"/></svg></a>
+          </div>
+
+
+          <div class="flex time-report">
+            
+          </div>
+        </div>
+      </div>
+
+      <div class="grid card play">
+        <div class="category-bg">
+
+        </div>
+        <div class="grid report">
+          <div class="flex category-header">
+            <h2 class="text-preset-3">Play</h2>
+            <a href="#" class="category-menu"><svg width="21" height="5" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" fill="currentcolor" fill-rule="evenodd"/></svg></a>
+          </div>
+<div class="flex time-report">
+  
+            
+</div>
+        </div>
+      </div>
+
+      <div class="grid card study">
+        <div class="category-bg">
+
+        </div>
+        <div class="grid report">
+          <div class="flex category-header">
+            <h2 class="text-preset-3">Study</h2>
+            <a href="#" class="category-menu"><svg width="21" height="5" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" fill="currentcolor" fill-rule="evenodd"/></svg></a>
+          </div>
+
+          <div class="flex time-report">
+                      </div>
+        </div>
+      </div>
+
+      <div class="grid card exercise">
+        <div class="category-bg">
+
+        </div>
+        <div class="grid report">
+          <div class="flex category-header">
+            <h2 class="text-preset-3">Exercise</h2>
+            <a href="#" class="category-menu"><svg width="21" height="5" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" fill="currentcolor" fill-rule="evenodd"/></svg></a>
+          </div>
+
+          <div class="flex time-report">
+                      </div>
+        </div>
+      </div>
+
+      <div class="grid card social">
+        <div class="category-bg">
+
+        </div>
+        <div class="grid report">
+          <div class="flex category-header">
+            <h2 class="text-preset-3">Social</h2>
+            <a href="#" class="category-menu"><svg width="21" height="5" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" fill="currentcolor" fill-rule="evenodd"/></svg></a>
+          </div>
+
+          <div class="flex time-report">
+                      </div>
+        </div>
+      </div>
+
+      <div class="grid card self-care">
+        <div class="category-bg">
+
+        </div>
+        <div class="grid report">
+          <div class="flex category-header">
+            <h2 class="text-preset-3">Self Care</h2>
+            <a href="#" class="category-menu"><svg width="21" height="5" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" fill="currentcolor" fill-rule="evenodd"/></svg></a>
+          </div>
+
+          <div class="flex time-report">
+                      </div>
+        </div>
+      </div>
+
+
+      <div class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+        Coded by <a href="http://jontesamuelsson.se">Jonatan Samuelsson</a>.
+      </div>
+    </div>
+  </main>
+</body>
+
+</html>

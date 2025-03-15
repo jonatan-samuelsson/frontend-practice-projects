@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Tip calculator app</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+
+  <script src="main.js" defer></script>
+</head>
+
+<body>
+
+  <main class="wrapper">
+    <img src="images/logo.svg" alt="Splitter logo" class="logo">
+    <div class="calculator grid ">
+      
+      <div class="input-form grid">
+        <div class="form-section flex">
+          <p class="form-label">Bill</p>
+          <div role="textbox" contenteditable="true" class="number-input form-part" name="bill" id="bill">0</div>
+        </div>
+        <div class="form-section flex">
+          <p class="form-label">Select Tip %</p>
+          <div class="tip-selector grid">
+            <div class="tip">5%</div>
+            <div class="tip">10%</div>
+            <div class="tip">15%</div>
+            <div class="tip">25%</div>
+            <div class="tip">50%</div>
+            <div class="tip custom" id="custom" role="textbox" contenteditable="true">Custom</div>
+            <div role="textbox" class="form-part" name="tipValue" id="tipValue">Custom</div>
+          </div>
+        </div>
+
+        <div class="form-section flex">
+          <p class="form-label">Number of People</p>
+          <div role="textbox" contenteditable="true" class="number-input form-part" name="people" id="people">0</div>
+        </div>
+      </div>
+
+      <div class="results-wrapper flex">
+        <div class="results flex">
+          
+          <div class="result-display flex">
+            <div class="result-headings flex">
+              <p class="result-heading">Tip Amount</p>
+              <p>/ person</p>
+            </div>
+            <div class="result invalid" id="tip-per-person">$0.00</div>
+          </div>
+    
+         <div class="result-display flex">
+            <div class="result-headings flex">
+              <p class="result-heading">Total</p>
+              <p>/ person</p>
+            </div>
+            <div class="result invalid" id="total-per-person">$0.00</div>
+         </div>
+
+        </div>
+  
+        <div class="reset-wrapper"><a href="#" class="reset" id="reset">Reset</a></div>
+      </div>
+    
+      <div class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+        Coded by <a href="http://jontesamuelsson.se" target="_blank">Jonatan Samuelsson</a>.
+      </div>
+    </div>
+  </main>
+</body>
+
+</html>

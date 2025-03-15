@@ -1,0 +1,187 @@
+
+$font-stack: "Barlow Semi Condensed", sans-serif
+
+
+$Purple-50: hsl(260, 100%, 95%)
+$Purple-300: hsl(264, 82%, 80%)
+$Purple-500: hsl(263, 55%, 52%)
+
+$White: hsl(0, 0%, 100%)
+$Grey-100: hsl(214, 17%, 92%)
+$Grey-200: hsl(0, 0%, 81%)
+$Grey-300:hsl(215, 10.20%, 67.30%)
+$Grey-400: hsl(224, 10%, 45%)
+$Grey-500: hsl(217, 19%, 35%)
+$Dark-blue: hsl(219, 29%, 14%)
+$Black: hsl(0, 0%, 7%)
+
+$space-50: .25rem
+$space-100: .5rem
+$space-200: 1rem
+$space-300: 1.5rem
+$space-400: 2rem
+$space-500: 2.5rem
+
+/* resets */
+
+*, *::before, *::after
+    box-sizing: border-box
+    margin: 0
+    padding: 0
+
+html, body, main 
+    min-height: 100vh
+
+img, iframe, video
+    max-inline-size: 100%
+    block-size: auto
+
+/* generic stylings & utilities */
+
+body   
+    background-color: $Grey-100
+    font-family: $font-stack
+
+.wrapper
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    
+
+.bg-purple-500
+    background-color: $Purple-500
+    color: $Purple-50
+    .name 
+        color: $White
+    .testimony-heading
+        color: $White
+
+.bg-grey-500
+    background-color: $Grey-500
+    color: $Grey-100
+    .name
+        color: $White
+    .title
+        color: $Grey-300
+    .testimony-heading  
+        color: $White
+
+.bg-white  
+    background-color: $White  
+    color: $Grey-400
+    .name, .testimony-heading
+        color: $Grey-500
+    
+.bg-dark-blue 
+    background-color: $Dark-blue
+    color: $Grey-100
+    .intro 
+        color: $White 
+    .testimony-heading
+        color: $Grey-200
+
+.bg-quote
+    background-image: url("images/bg-pattern-quotation.svg")
+    background-size: 6.5rem 6.375rem
+    background-position: left 23.5rem top 0
+    background-repeat: no-repeat
+
+
+
+/* testimonials section layout */
+
+.testimonials-grid
+    display: grid
+    justify-items: center
+    grid-template-areas: "card1" "card2" "card3" "card4" "card5"
+    gap: $space-300
+    width: min(19.0625rem, 90%)
+    margin: $space-500 0
+
+.card-testimonial
+    display: flex
+    flex-direction: column
+    gap: $space-200
+    
+    padding: $space-400
+    border-radius: .5rem
+    box-shadow: 2.5rem 3.75rem 3.125rem -2.9375rem rgb(72 85 106 / .25)
+    .intro 
+        display: flex
+        align-items: center
+        gap: $space-200
+        img             
+            border-radius: 100%
+            width: 1.75rem
+        img.border-purple-300
+            border: .125rem solid $Purple-300
+        img.border-purple-500
+            border: .125rem solid $Purple-500
+        img.border-transparent
+            border: none
+    .name
+        font-weight: 500
+        font-size: .8125rem 
+        line-height: 1.1em 
+        letter-spacing: 0
+    .title
+        font-weight: 500
+        font-size: .6875rem 
+        line-height: 1.1em 
+        letter-spacing: 0
+    .testimony-heading
+        font-weight: 600
+        font-size: 1.25rem 
+        line-height: 1.2em 
+        letter-spacing: 0
+    .testimony-text
+        font-weight: 500
+        font-size: .8125rem 
+        line-height: 1.4em 
+        letter-spacing: 0
+
+.card1  
+    grid-area: card1
+.card2  
+    grid-area: card2
+.card3  
+    grid-area: card3
+.card4  
+    grid-area: card4
+.card5  
+    grid-area: card5
+
+
+/* footer style */
+
+.attribution
+    display: flex
+    justify-content: center
+    align-items: center
+    padding: $space-400
+    font-size: .65rem 
+    color: $Grey-500
+    a 
+        color: $Dark-blue 
+        text-decoration: none
+    a:hover, a:active, a:focus
+        text-decoration: underline
+        color: $Purple-500
+
+@media screen and (41rem <= width < 70rem) 
+    .testimonials-grid
+        width: 40.4375rem
+        grid-template-areas:"card1 card1" "card2 card3" "card4 card4" "card5 card5"
+        grid-template-columns: repeat(2, 1fr)
+        
+   
+
+@media screen and (70rem <= width)
+    .testimonials-grid
+        width: 69.625rem
+        grid-template-areas: "card1 card1 card2 card5" "card3 card4 card4 card5"
+        grid-template-columns: repeat(4, 1fr)
+        row-gap: $space-300
+        column-gap: $space-400
+        
