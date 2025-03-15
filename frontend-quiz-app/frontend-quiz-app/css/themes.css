@@ -1,0 +1,47 @@
+
+/* light & dark themes */
+
+.frontend-quiz-inner {
+    
+
+    &[data-theme='light'] {
+        --quiz-background-color: var(--clr-light-grey);
+        --quiz-background-image: url('../assets/images/pattern-background-mobile-light.svg');
+
+
+        --theme-icon-background-sun: url('../assets/images/icon-sun-dark.svg');
+        --theme-icon-background-moon: url('../assets/images/icon-moon-dark.svg');
+
+        --heading-color: var(--clr-dark-navy);
+        --intro-p-color: var(--clr-grey-navy);
+
+        --main-item-color: var(--clr-dark-navy);
+        --main-item-background: var(--clr-white);
+        --main-item-shadow-color: hsla(220, 29%, 66%, 0.14);
+
+        --warning-color: var(--clr-red);
+
+
+    }
+
+    &[data-theme='dark'] {
+        --quiz-background-color: var(--clr-dark-navy);
+        --quiz-background-image: url('../assets/images/pattern-background-mobile-dark.svg');
+
+
+        --theme-icon-background-sun: url('../assets/images/icon-sun-light.svg');
+        --theme-icon-background-moon: url('../assets/images/icon-moon-light.svg');
+
+
+        --heading-color: var(--clr-white);
+        --intro-p-color: var(--clr-light-blueish);
+
+        --main-item-color: var(--clr-white);
+        --main-item-background: var(--clr-navy);
+        --main-item-shadow-color: hsla(216, 25%, 25%, 0.14);
+
+        --warning-color: var(--clr-white);
+    }
+
+
+}

@@ -1,0 +1,30 @@
+/* resets & boilerplates */
+
+.frontend-quiz-inner {
+
+    & *,
+    & *::before,
+    & *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        max-width: 100%;
+
+        font: inherit;
+
+    }
+
+    img,
+    iframe,
+    video {
+        max-width: 100%;
+
+        display: block;
+    }
+
+    p {
+        max-inline-size: 75ch;
+        text-wrap-style: pretty;
+    }
+
+}

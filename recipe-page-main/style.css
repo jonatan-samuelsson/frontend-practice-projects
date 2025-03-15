@@ -1,0 +1,268 @@
+@font-face {
+    font-family: outfit;
+    src: url(assets/fonts/outfit/Outfit-VariableFont_wght.ttf);
+}
+@font-face {
+    font-family: young-serif;
+    src: url(assets/fonts/young-serif/YoungSerif-Regular.ttf);
+}
+
+
+:root {
+
+--White: hsl(0, 0%, 100%);
+
+--Beige: #F3E5D8;
+
+--Stone100: hsl(30, 54%, 90%);
+--Stone150: hsl(30, 18%, 87%);
+--Stone600: hsl(30, 10%, 34%);
+--Stone900: hsl(24, 5%, 18%);
+
+--Brown800: hsl(14, 45%, 36%);
+
+--Rose800: hsl(332, 51%, 32%);
+--Rose50: hsl(330, 100%, 98%);
+}
+
+*, *::before, *::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html, body, main {
+    min-height: 100vh;
+    font-family: outfit, sans-serif;
+    font-weight: 400;
+    color: var(--Stone600);
+}
+
+body {
+    background-color: var(--Beige);
+}
+
+h1, h2 {
+    font-family: young-serif, serif;
+    font-weight: 400;
+}
+
+h2 {
+    color: var(--Brown800);
+    font-size: 1.8rem;
+    margin-bottom: .7em;
+}
+
+p {
+    line-height: 1.5em;
+    
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+.wrapper {
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    width: 83%;
+    margin: 0 auto;
+    padding: 1.5rem 0;
+
+    &.divider {
+        border-bottom: solid 1px var(--Stone150);
+    }
+}
+
+.recipie {
+    width: 100%;
+
+    background-color: var(--White);
+
+    ul {
+            
+        list-style: none;
+        padding: 0 5px;
+        
+    }
+
+    li {
+        position: relative;
+
+        line-height: 1.5em;
+        
+        margin: .75em 0;
+    }
+
+    ul li {
+        padding-inline: 2.5rem 0;
+        background-image: radial-gradient(circle, var(--Rose800) 25%, var(--Rose800) 50%, transparent 50% 100%);
+        background-size: .4em .4em;
+        background-repeat: no-repeat;
+        background-position: 0 50%;
+    }
+
+    ol {
+
+        padding-inline: 1.75rem 0;
+    }
+
+    ol li {
+
+        padding-inline: .8rem 0;
+
+        &::marker {
+            color: var(--Brown800);
+            font-weight: 700;
+        }
+    }
+
+
+    .intro {
+        & h1 {
+            color: var(--Stone900);
+            font-size: 2.2rem;
+            line-height: 1em;
+            margin-block: 1em;
+        }
+    }
+
+    .prep-time {
+        background-color: var(--Rose50);
+
+        margin-block: 2.5rem 0;
+        padding: 1.2rem 1.5rem;
+
+        border-radius: 10px;
+
+        h2 {
+            font-family: outfit, sans-serif;
+            font-weight: 600;
+            font-size: 1.3rem;
+            color: var(--Rose800);
+            margin-bottom: 1rem;
+        }
+
+       
+    }
+
+    .nutrition  {
+        
+        table {
+        width: 100%;
+        margin-block: 1rem;
+
+        border-collapse: collapse;
+
+        & tr:not(:last-child) {
+            border-bottom: solid 1px var(--Stone150);
+
+        }
+
+        td {
+            width: 50%;
+            padding: 1rem 0;
+        }
+
+        tr  {
+            
+
+            td:first-child {
+                padding-left: 2.2rem;
+            }
+           
+        }
+
+        & .unit {
+            padding-left: .9rem;
+            font-weight: 700;
+            color: var(--Brown800);
+        }
+        
+        }
+    
+    }
+}
+
+
+.attribution {
+    text-align: center;
+
+    a {
+        color: var(--Brown800);
+        text-decoration: none;
+    }
+    
+}
+
+
+@media (width > 700px) {
+    
+
+    
+    .container {
+        width: 100%;
+        margin: 0;
+        padding-block: 1rem;
+
+        
+    }
+    .recipie {
+        width: min(75%, 728px);
+        padding-inline: 2.5rem;
+        padding-block: 2.5rem 1rem;
+        margin: 8rem auto;
+
+        border-radius: 25px;
+
+        li {
+            margin: .5rem 0;
+        }
+
+        figure img {
+            border-radius: 15px;
+        }
+
+        .intro {
+
+            padding-block-end: 0;
+
+            h1 {
+            font-size: 2.4rem;
+            margin-block: .5em;
+            }
+        }
+
+        .prep-time {
+            margin-block: 2rem 0;
+        }
+
+
+        .nutrition {
+            
+            & table {
+            
+            td {
+                width: 50%;
+                
+            }
+    
+            tr  {
+                
+    
+                td:first-child {
+                    padding-left: 2rem;
+                }
+               
+            }
+        }
+        }
+
+    }
+}

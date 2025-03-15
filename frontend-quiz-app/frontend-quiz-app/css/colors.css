@@ -1,0 +1,19 @@
+/* colors */
+
+.frontend-quiz-inner {
+--clr-purple: #a729f5;
+--clr-dark-navy: #303d50;
+--clr-navy: #384D66;
+--clr-grey-navy: #626c7f;
+--clr-light-blueish: #adc2e1;
+--clr-light-grey: #f4f6fa;
+--clr-white: hsl(0, 0%, 100%);
+--clr-red: #EE5454;
+--clr-green: #26d982;
+
+
+--clr-pale-orange: #FFF1E9;
+--clr-pale-green: #E0FDEF;
+--clr-pale-blue: #EBF0FF;
+--clr-pale-purple: #F6E7FF;
+}
