@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Interactive rating component</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+
+
+  <link rel="stylesheet" href="style.css">
+  <script src="main.js" defer></script>
+
+</head>
+
+<body>
+  <main class="responsive-container">
+    <div class="wrapper flex">
+
+      <div class="rating-component grid" data-view="rating">
+        <!-- Rating state start -->
+
+        <article class="rating-page flex" data-view="rating">
+
+          <div class="star-row flex" aria-hidden="true">
+            <div class="star">
+              <img src="images/icon-star.svg" alt="">
+            </div>
+          </div>
+
+          <h1>How did we do?</h1>
+
+          <p>
+            Please let us know how we did with your support request. All feedback is appreciated
+            to help us improve our offering!
+          </p>
+
+          <form id="rating-form">
+            <div class="rating-radios" role="radiogroup">
+              <input type="radio" name="score" tabindex="0" id="score1" value="1">
+              <label class="checkmark" for="score1">
+                1
+              </label>
+
+
+              <input type="radio" name="score" tabindex="0" id="score2" value="2">
+              <label class="checkmark" for="score2">
+
+                2
+              </label>
+
+
+
+              <input type="radio" name="score" tabindex="0" id="score3" value="3" checked>
+              <label class="checkmark" for="score3">
+
+                3
+              </label>
+
+
+
+              <input type="radio" name="score" tabindex="0" id="score4" value="4">
+              <label class="checkmark" for="score4">
+
+                4
+              </label>
+
+
+
+              <input type="radio" name="score" tabindex="0" id="score5" value="5">
+              <label class="checkmark" for="score5">
+
+                5
+              </label>
+
+
+
+            </div>
+
+            <input type="submit" value="Submit">
+          </form>
+
+
+        </article>
+
+        <!-- Rating state end -->
+
+        <article class="rating-page grid" data-view="thnx">
+
+          <!-- Thank you state start -->
+
+          <img src="images/illustration-thank-you.svg" alt="" aria-hidden="true">
+
+          <div class="score-select grid">
+            <p>You selected <span id="score-display"></span> out of 5</p>
+          </div>
+
+          <h1 class="thnx-heading">Thank you!</h1>
+
+          <p class="thnx-msg">
+            We appreciate you taking the time to give a rating. If you ever need more support,
+            don’t hesitate to get in touch!
+          </p>
+
+          <button class="close-btn grid" aria-label="Click here to close the thank you message"></button>
+
+          <!-- Thank you state end -->
+
+        </article>
+      </div>
+      <div class="dimensions-toast"></div>
+    </div>
+    <!-- wrapper close -->
+    <!-- <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="http://jontesamuelsson.se">Jonatan Samuelsson</a>.
+    </div> -->
+  </main>
+</body>
+
+</html>
