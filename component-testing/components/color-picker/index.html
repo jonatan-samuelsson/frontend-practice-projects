@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color-scheme-generator</title>
+    <link rel="stylesheet" href="color-schemes.css">
+    <script src="color-scheme.js" defer></script>
+</head>
+
+<body>
+    <main class="wrapper flex">
+        <div class="color-scheme grid">
+            <div class="colors flex colors-primary" id="clrs-primary">
+                <form action="" class="controls grid" id="controls-primary">
+                    <div class="flex flex-align-center">
+                        <label for="primary-hue">
+                            Hue
+                        </label>
+                    
+                    <input type="range" id="primary-hue" name="hue" min="0" max="360" step="1">
+                    </div>
+                    <div class="flex flex-align-center">
+                        <label for="primary-saturation">
+                            Saturation
+                        </label>
+                    
+                    <input type="range" id="primary-saturation" name="saturation" min="0" max="100" step=".5">
+                    </div>
+                    <div class="flex flex-align-center">
+                        <label for="primary-light">
+                            Lightness
+                        </label>
+                    
+                    <input type="range" id="primary-light" name="light" min="0" max="100" step=".5">
+                </div>
+                </form>
+            </div>
+            <div class="colors flex colors-accent" id="clrs-accent">
+                <form action="" class="controls grid" id="controls-accent">
+                    <div class="flex flex-align-center">
+                        <label for="hue">
+                            Hue
+                        </label>
+                    
+                    <input type="range" id="hue" name="hue" min="0" max="360" step="1">
+                    </div>
+                    <div class="flex flex-align-center">
+                        <label for="saturation">
+                            Saturation
+                        </label>
+                    
+                    <input type="range" id="saturation" name="saturation" min="0" max="100" step=".5">
+                    </div>
+                    <div class="flex flex-align-center">
+                        <label for="light">
+                            Lightness
+                        </label>
+                    
+                    <input type="range" id="light" name="light" min="0" max="100" step=".5">
+                </div>
+                </form>
+            </div>
+            <div class="colors flex colors-neutral" id="clrs-neutral">
+                <form action="" class="controls grid" id="controls-neutral">
+                    <div class="flex flex-align-center">
+                        <label for="hue">
+                            Hue
+                        </label>
+                    
+                    <input type="range" id="hue" name="hue" min="0" max="360" step="1">
+                    </div>
+                    <div class="flex flex-align-center">
+                        <label for="saturation">
+                            Saturation
+                        </label>
+                    
+                    <input type="range" id="saturation" name="saturation" min="0" max="100" step=".5">
+                    </div>
+                    <div class="flex flex-align-center">
+                        <label for="light">
+                            Lightness
+                        </label>
+                    
+                    <input type="range" id="light" name="light" min="0" max="100" step=".5">
+                </div>
+                </form>
+            </div>
+
+        </div>
+    </main>
+
+</body>
+
+</html>

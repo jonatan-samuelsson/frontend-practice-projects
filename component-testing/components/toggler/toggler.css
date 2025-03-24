@@ -1,0 +1,108 @@
+
+.toggler {
+    --marker-pad: 3rem;
+    isolation: isolate;
+    position: relative;
+    margin: 0 auto;
+    padding: 0 1.75rem;
+
+    grid-template-columns: repeat(3, auto);
+    grid-template-areas: "stack stack stack";
+    align-content: center;
+
+    gap: var(--marker-pad);
+
+
+    background-color: #EEE;
+
+    border: 1px solid #666;
+    border-radius: 100vw;
+    box-shadow: 0 0 10px -2px #333;
+}
+
+.toggler-slider {
+   grid-area: stack;
+    grid-template-columns: subgrid;
+    align-content: center;
+    height: 100%;
+    width: 100%;
+}
+
+.toggler-marker {
+    z-index: 0;
+    grid-row: 1 / 2;
+    
+    
+    background-color: #FFF;
+    height: 1.6lh;
+    width: calc(100% + var(--marker-pad));
+    translate: calc(-.5 * var(--marker-pad));
+
+    box-shadow: 0 0 10px -1px black;
+    border-radius: 100vw;
+
+    transition: all 300ms ease-out;
+    
+}
+
+.toggler-buttons {
+    
+    grid-area: stack;
+
+    grid-auto-flow: column;
+    grid-template-columns: subgrid;
+    align-content: center;
+}
+
+.toggler-category-button {
+    z-index: 5;
+
+    
+    place-items: center;
+
+    background-color: transparent;
+    color: #333;
+    border: none;
+    cursor: pointer;
+}
+
+.toggler[data-selected="1"] .toggler-marker {
+    grid-column: 1 / 2;
+    transition: all 300ms ease-out;
+}
+.toggler[data-selected="2"] .toggler-marker {
+    grid-column: 2 / 3;
+    transition: all 300ms ease-out;
+}
+.toggler[data-selected="3"] .toggler-marker {
+    grid-column: 3 / -1;
+    transition: all 300ms ease-out;
+}
+
+.content {
+    grid-template-areas: "stack";
+}
+
+.content-page {
+    grid-area: stack;
+}
+
+.toggler[data-selected="1"] + .content > .content-page[data-content="1"],
+.toggler[data-selected="2"] + .content > .content-page[data-content="2"],
+.toggler[data-selected="3"] + .content > .content-page[data-content="3"] {
+    opacity: 1;
+    scale: 1;
+    transform-origin: top;
+    transition: opacity ease-out 300ms, scale ease-out 300ms 150ms;
+}
+
+
+.toggler[data-selected="1"] + .content > .content-page:not([data-content="1"]),
+.toggler[data-selected="2"] + .content > .content-page:not([data-content="2"]),
+.toggler[data-selected="3"] + .content > .content-page:not([data-content="3"]) {
+    opacity: 0;
+    scale: 0;
+    transform-origin: top;
+    transition: opacity ease-out 300ms, scale ease-out 300ms 150ms;
+}
+   

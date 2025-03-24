@@ -1,0 +1,92 @@
+
+@import url(./components/toggler/toggler.css);
+
+@layer fonts {
+    @font-face {
+        font-family: quintessential;
+        src: url(fonts/Quintessential-Regular.ttf);
+    }
+
+    @font-face {
+        font-family: waterfall;
+        src: url(fonts/Waterfall-Regular.ttf);
+    }
+
+    @font-face {
+        font-family: goto-sans;
+        src: url(fonts/Gotu-Regular.ttf);
+    }
+
+    @font-face {
+        font-family: open-sans-regular;
+        src: url(fonts/OpenSans-VariableFont_wdth\,wght.ttf);
+    }
+
+    @font-face {
+        font-family: open-sans-italic;
+        src: url(fonts/OpenSans-Italic-VariableFont_wdth\,wght.ttf);
+    }
+
+    @font-face {
+        font-family: aboreto;
+        src: url(fonts/Aboreto-Regular.ttf);
+    }
+
+    @font-face {
+        font-family: sofia;
+        src: url(fonts/SofiaSans-VariableFont_wght.ttf);
+    }
+
+    @font-face {
+        font-family: oswald;
+        src: url(fonts/Oswald-VariableFont_wght.ttf);
+    }
+
+}
+
+/* resets & basics*/
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body, main {
+    min-height: 100svh;
+}
+
+img, video, svg, iframe {
+    display: block;
+    max-width: 100%;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-block-start: 10rem;
+    
+}
+
+.flex {
+    display: flex;
+
+}
+
+.flex-col {
+    
+    flex-direction: column;
+}
+
+.flex-align-center {
+    align-items: center;
+}
+
+.flex-justify-center {
+    justify-content: center;
+}
+
+.grid {
+    display: grid;
+}
