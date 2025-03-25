@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Contact form</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="wrapper">
+  <section class="contactform grid">
+    
+    <div class="__main grid">
+      
+        <h1 class="__heading">Contact Us</h1>
+      <form class="__form">
+        
+          <div class="__inputs grid">
+            <label class="__txtlabel"><span class="__required">First Name</span> <input type="text" class="__input __roundedinput" autocomplete="given-name"></label>
+            <p class="__error" aria-hidden="true">This field is required</p>
+          
+            <label class="__txtlabel"><span class="__required">Last Name</span> <input type="text" class="__input __roundedinput" autocomplete="family-name"></label>
+            <p class="__error" aria-hidden="true">This field is required</p>
+          
+            <label class="__txtlabel"><span class="__required">Email Address</span> <input type="email" class="__input __roundedinput" autocomplete="email"></label>
+            <p class="__error" aria-hidden="true">Please enter a valid email address</p>
+            <p class="__error" aria-hidden="true">This field is required</p>
+          </div>
+        
+          <fieldset class="__radios">
+            <legend><span class="__required">Query Type</span></legend>
+            <label class="__radiolabel  __roundedinput" for="support-request"><input type="radio" name="radio" id="support-request" class="__radio">Support Request</label>
+            <label class="__radiolabel  __roundedinput" for="general-inquiry"><input type="radio" name="radio" id="general-inquiry" class="__radio">General Enquiry</label>
+            <p class="__error" aria-hidden="true">Please select a query type</p>
+          </fieldset>
+        
+          <label class="__txtlabel"><span class="__required">Message</span>
+          <input type="textbox" class="__txtbx __roundedinput">
+        </label>
+          <p class="__error" aria-hidden="true">This field is required</p>
+      </div>
+      
+        <div class="__consent">
+          <label class="__checkboxlabel"> <input type="checkbox" class="__checkbox"> I consent to being contacted by the team</label>
+          <p class="__error" aria-hidden="true">To submit this form, please consent to being contacted</p>
+        </div>
+      
+       <div class="__submit"> <input type="submit" value="Submit"></input></div>
+      
+        <div class="__success">
+          Message Sent!
+          Thanks for completing the form. We'll be in touch soon!
+        </div>
+        
+      </form>
+  </section>
+</main>
+  <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
+    Coded by <a href="http://jontesamuelsson.se">Jonatan Samuelsson</a>.
+  </footer>
+</body>
+</html>
