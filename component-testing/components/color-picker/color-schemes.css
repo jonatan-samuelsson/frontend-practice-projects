@@ -11,6 +11,10 @@
 
 html, body, main {
     min-height: 100svh;
+<<<<<<< HEAD
+=======
+    font-size: .825rem;
+>>>>>>> 11451c5e40d755e5f70fec523cd97c99973a19a3
 }
 
 img, video, svg, iframe {
@@ -22,7 +26,11 @@ img, video, svg, iframe {
     display: flex;
     flex-direction: column;
     align-items: center;
+<<<<<<< HEAD
     padding-block-start: 10rem;
+=======
+    padding-block-start: 7.5rem;
+>>>>>>> 11451c5e40d755e5f70fec523cd97c99973a19a3
     
 }
 
@@ -48,9 +56,41 @@ img, video, svg, iframe {
     display: grid;
 }
 
+<<<<<<< HEAD
 
 
 .color {
     aspect-ratio: 1;
     height: 50px;
+=======
+.color-scheme {
+    row-gap: 1rem;
+}
+
+.color {
+    position: relative;
+    width: 80px;
+    height: 200px;
+    transition: scale 500ms ease-in-out;
+    &:hover {
+        scale: 1.4;
+        transform-origin: center;
+        z-index: 100;
+        cursor: pointer;
+        box-shadow: 0 0 25px -2px black;
+
+        transition: scale 500ms ease-in-out;
+    }
+    
+}
+
+.piece-label {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    background-color: rgba(240, 248, 255, .7);
+    backdrop-filter: blur(.35rem);
+>>>>>>> 11451c5e40d755e5f70fec523cd97c99973a19a3
 }

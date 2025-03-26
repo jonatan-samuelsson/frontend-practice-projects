@@ -1,0 +1,162 @@
+@font-face {
+    font-family: karla;
+    src: url(./assets/fonts/Karla-VariableFont_wght.ttf);
+}
+
+:root {
+
+
+
+
+
+    --clr-green-200: hsl(148, 38%, 91%);
+    --clr-green-600: hsl(169, 82%, 27%);
+    --clr-red: hsl(0, 66%, 54%);
+
+
+
+    --clr-white: hsl(0, 0%, 100%);
+    --clr-grey-500: hsl(186, 15%, 59%);
+    --clr-grey-900: hsl(187, 24%, 22%);
+
+    --fs-heading: 2rem;
+    --fs-body-s: 1rem;
+    --fs-body-m: 1.125rem;
+
+    --pad-in: 1.5rem;
+    --pad-bl: 1.5rem;
+    --big-gap: 2.5rem;
+    --medium-gap: 2rem;
+    --smaller-gap: 1.5rem;
+    --small-gap: 1rem;
+    --tiny-gap: .75rem;
+
+    --body-lh: 1.5;
+    --heading-lh: 1;
+    
+
+
+}
+
+
+/* resets & boilerplates */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font: inherit;
+
+    /* outline: solid 2px rgb(200 10 50 / .2); */
+}
+
+img,
+iframe,
+video {
+    max-width: 100%;
+
+    display: block;
+}
+
+
+
+html {
+    height: 100svh;
+}
+
+html,
+body {
+
+
+    min-height: 100svh;
+
+}
+
+/* h1, h2, h3, h4, h5, h6 {
+    text-wrap-style: balance;
+} */
+
+p {
+    /* max-inline-size: 75ch;
+    text-wrap-style: pretty; */
+    line-height: 1.6;
+}
+
+/* overall layouts */
+
+body {
+    font-family: karla, sans-serif;
+    font-weight: 400;
+    font-size: var(--fs-body-s);
+    background-color: var(--clr-green-200);
+    color: var(--clr-grey-900);
+}
+
+
+
+
+.flex {
+    display: flex;
+}
+
+.grid {
+    display: grid;
+}
+
+.wrapper {
+
+
+    min-height: 100svh;
+    display: grid;
+    place-items: center;
+    
+
+
+}
+
+.contactform {
+    background-color: var(--clr-white);
+    padding: var(--pad-bl) var(--pad-in);
+    gap: var(--big-gap);
+    line-height: var(--body-lh);
+
+    border-radius: 1rem;
+
+    .__main {
+        gap: var(--medium-gap);
+        
+    }
+
+    .__heading {
+        font-size: var(--fs-heading);
+        line-height: var(--heading-lh);
+    }
+
+    .__inputs {
+        gap: var(--smaller-gap);
+    }
+
+    .__roundedinput {
+        outline: inset 1px solid var(--clr-grey-500);
+    }
+
+    .__required:after {
+        content: "*";
+        color: var(--clr-green-600);
+        padding-left: .5em;
+    }
+
+    .__txtlabel {
+        display: grid;
+    }
+
+    .__radios {}
+}
+
+
+
+.__error, .__success {
+    display: none;
+}
