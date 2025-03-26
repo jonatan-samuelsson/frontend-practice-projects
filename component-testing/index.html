@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Various components</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="./main.js" defer></script>
+    <script src="./components/toggler/toggler.js" defer></script>
+</head>
+
+<body>
+    <main class="wrapper">
+        <div><a href="./components/color-picker/index.html">Colors</a></div>
+        <!-- toggler start -->
+        <div class="toggler grid" data-selected="2" id="toggler">
+
+            <div class="toggler-slider grid">
+                <div class="toggler-marker" id="toggler-marker">
+    
+                </div>
+            </div>
+            <!-- toggler buttons start -->
+            <div class="toggler-buttons grid">
+                <button class="toggler-category-button grid" data-button-number="1">
+                    <span>View A</span>
+                </button>
+                <button class="toggler-category-button grid" data-button-number="2">
+                    <span>Jättelångt länknamn</span>
+                </button>
+                <button class="toggler-category-button grid" data-button-number="3">
+                    <span>View C</span>
+                </button>
+            </div>
+            <!-- toggler buttons close -->
+        </div>
+        <!-- toggler close -->
+        <!-- content start -->
+        <div class="content grid">
+            <div class="content-page" data-content="1">
+                View no 1
+            </div>
+            <div class="content-page" data-content="2">
+                View no 2
+            </div>
+            <div class="content-page" data-content="3">
+                View no 3
+            </div>
+        </div>
+    </main>
+
+</body>
+
+</html>

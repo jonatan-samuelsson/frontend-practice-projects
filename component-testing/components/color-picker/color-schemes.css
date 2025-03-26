@@ -1,0 +1,56 @@
+
+
+
+/* resets & basics*/
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body, main {
+    min-height: 100svh;
+}
+
+img, video, svg, iframe {
+    display: block;
+    max-width: 100%;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-block-start: 10rem;
+    
+}
+
+.flex {
+    display: flex;
+
+}
+
+.flex-col {
+    
+    flex-direction: column;
+}
+
+.flex-align-center {
+    align-items: center;
+}
+
+.flex-justify-center {
+    justify-content: center;
+}
+
+.grid {
+    display: grid;
+}
+
+
+
+.color {
+    aspect-ratio: 1;
+    height: 50px;
+}
