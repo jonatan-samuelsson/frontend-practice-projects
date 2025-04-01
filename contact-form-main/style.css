@@ -186,7 +186,7 @@ body {
 
     .__radioset {
         border: none;
-        display: grid;
+        
         gap: var(--small-gap);
 
 
@@ -449,6 +449,10 @@ body {
             }
         }
 
+        .__radioset {
+            grid-template-columns: 1fr 1fr;
+        }
+
         .__success {
             width: max-content;
         }
@@ -457,6 +461,8 @@ body {
     @media screen and (width > 72rem) {
         .contactform {
             width: clamp(43.125rem, 51svw, 60rem);
+
+            
         }
     }
 

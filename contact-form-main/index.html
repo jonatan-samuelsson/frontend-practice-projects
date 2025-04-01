@@ -25,34 +25,34 @@
 
         <div class="__inputs grid">
           <label class="grid __txtlabel __name"><span class="__required">First Name</span>
-            <input type="text" class="__input __roundedinput __validate" name="givenName" autocomplete="given-name">
+            <input type="text" class="__input __roundedinput __validate" name="givenName" autocomplete="given-name" aria-describedby="given-name-invalid given-name-missing">
             <div>
-              <p class="__error">Please enter a name</p>
-              <p class="__missing">This field is required</p>
+              <p class="__error" id="given-name-invalid">Please enter a name</p>
+              <p class="__missing" id="given-name-missing">This field is required</p>
             </div>
           </label>
           
 
           <label class="grid __txtlabel __name"><span class="__required">Last Name</span>
-            <input type="text" class="__input __roundedinput __validate" name="familyName" autocomplete="family-name">
+            <input type="text" class="__input __roundedinput __validate" name="familyName" autocomplete="family-name" aria-describedby="family-name-invalid family-name-missing">
             <div>
-              <p class="__error">Please enter a name</p>
-              <p class="__missing">This field is required</p>
+              <p class="__error" id="family-name-invalid">Please enter a name</p>
+              <p class="__missing" id="family-name-missing">This field is required</p>
             </div>
           </label>
           
 
           <label class="__txtlabel __email"><span class="__required">Email Address</span>
-            <input type="email" class="__input __roundedinput __validate" name="email" autocomplete="email">
-            <p class="__error">Please enter a valid email address</p>
-          <p class="__missing">This field is required</p>
+            <input type="email" class="__input __roundedinput __validate" name="email" autocomplete="email" aria-describedby="email-invalid email-missing">
+            <p class="__error" id="email-invalid">Please enter a valid email address</p>
+          <p class="__missing" id="email-missing">This field is required</p>
           </label>
           
         </div>
 
         <div class="__radios __txtlabel grid">
           <p class="__required" id="radio-label">Query Type</p>
-          <fieldset class="__radioset __validate" aria-labelledby="radio-label" name="queryType">
+          <fieldset class="__radioset __validate grid" aria-labelledby="radio-label" name="queryType" aria-describedby="querytype-missing">
             <label class="__radiolabel  __roundedinput" for="support-request"><input type="radio" name="queryType" value="supportRequest"
                 id="support-request" class="__input __radio"><span>
                 Support Request</span>
@@ -63,23 +63,23 @@
                 General Enquiry</span>
               <div class="__checkmark" aria-hidden="true"></div>
             </label>
-            <p class="__missing">Please select a query type</p>
+            <p class="__missing" id="querytype-missing">Please select a query type</p>
           </fieldset>
         </div>
 
         <label class="__txtlabel __message"><span class="__required">Message</span>
-          <textarea class="__txtbx __roundedinput __validate" name="message"></textarea>
-          <p class="__missing">This field is required</p>
+          <textarea class="__txtbx __roundedinput __validate" name="message" aria-describedby="message-missing"></textarea>
+          <p class="__missing" id="message-missing">This field is required</p>
         </label>
 
 
 
         <div class="__consent">
           <label class="__checkboxlabel"> 
-            <input type="checkbox" class="__checkbox __validate" name="consent">
+            <input type="checkbox" class="__checkbox __validate" name="consent" aria-describedby="consent-missing">
             <div class="__checkmark" aria-hidden="true"></div>  I consent to being
             contacted by the team</label>
-          <p class="__missing">To submit this form, please consent to being contacted</p>
+          <p class="__missing" id="consent-missing">To submit this form, please consent to being contacted</p>
         </div>
 
         <div class="__submit"> <input type="submit" value="Submit" name="submit"></input></div>
