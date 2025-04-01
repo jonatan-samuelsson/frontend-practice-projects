@@ -1,67 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
+
   <title>Frontend Mentor | Contact form</title>
 
   <link rel="stylesheet" href="style.css">
+
+  <script src="./main.js" defer></script>
 </head>
+
 <body>
   <main class="wrapper">
-  <section class="contactform grid">
-    
-    <div class="__main grid">
-      
+    <form class="contactform grid" aria-live="polite">
+
+      <div class="__main grid">
+
         <h1 class="__heading">Contact Us</h1>
-      <form class="__form">
-        
-          <div class="__inputs grid">
-            <label class="__txtlabel"><span class="__required">First Name</span> <input type="text" class="__input __roundedinput" autocomplete="given-name"></label>
-            <p class="__error" aria-hidden="true">This field is required</p>
+
+        <div class="__inputs grid">
+          <label class="grid __txtlabel __name"><span class="__required">First Name</span>
+            <input type="text" class="__input __roundedinput __validate" name="givenName" autocomplete="given-name">
+            <div>
+              <p class="__error">Please enter a name</p>
+              <p class="__missing">This field is required</p>
+            </div>
+          </label>
           
-            <label class="__txtlabel"><span class="__required">Last Name</span> <input type="text" class="__input __roundedinput" autocomplete="family-name"></label>
-            <p class="__error" aria-hidden="true">This field is required</p>
+
+          <label class="grid __txtlabel __name"><span class="__required">Last Name</span>
+            <input type="text" class="__input __roundedinput __validate" name="familyName" autocomplete="family-name">
+            <div>
+              <p class="__error">Please enter a name</p>
+              <p class="__missing">This field is required</p>
+            </div>
+          </label>
           
-            <label class="__txtlabel"><span class="__required">Email Address</span> <input type="email" class="__input __roundedinput" autocomplete="email"></label>
-            <p class="__error" aria-hidden="true">Please enter a valid email address</p>
-            <p class="__error" aria-hidden="true">This field is required</p>
-          </div>
-        
-          <fieldset class="__radios">
-            <legend><span class="__required">Query Type</span></legend>
-            <label class="__radiolabel  __roundedinput" for="support-request"><input type="radio" name="radio" id="support-request" class="__radio">Support Request</label>
-            <label class="__radiolabel  __roundedinput" for="general-inquiry"><input type="radio" name="radio" id="general-inquiry" class="__radio">General Enquiry</label>
-            <p class="__error" aria-hidden="true">Please select a query type</p>
+
+          <label class="__txtlabel __email"><span class="__required">Email Address</span>
+            <input type="email" class="__input __roundedinput __validate" name="email" autocomplete="email">
+            <p class="__error">Please enter a valid email address</p>
+          <p class="__missing">This field is required</p>
+          </label>
+          
+        </div>
+
+        <div class="__radios __txtlabel grid">
+          <p class="__required" id="radio-label">Query Type</p>
+          <fieldset class="__radioset __validate" aria-labelledby="radio-label" name="queryType">
+            <label class="__radiolabel  __roundedinput" for="support-request"><input type="radio" name="queryType" value="supportRequest"
+                id="support-request" class="__input __radio"><span>
+                Support Request</span>
+              <div class="__checkmark" aria-hidden="true"></div>
+            </label>
+            <label class="__radiolabel  __roundedinput" for="general-inquiry"><input type="radio" name="queryType" value="generalInquiry"
+                id="general-inquiry" class="__input __radio"><span>
+                General Enquiry</span>
+              <div class="__checkmark" aria-hidden="true"></div>
+            </label>
+            <p class="__missing">Please select a query type</p>
           </fieldset>
-        
-          <label class="__txtlabel"><span class="__required">Message</span>
-          <input type="textbox" class="__txtbx __roundedinput">
+        </div>
+
+        <label class="__txtlabel __message"><span class="__required">Message</span>
+          <textarea class="__txtbx __roundedinput __validate" name="message"></textarea>
+          <p class="__missing">This field is required</p>
         </label>
-          <p class="__error" aria-hidden="true">This field is required</p>
+
+
+
+        <div class="__consent">
+          <label class="__checkboxlabel"> 
+            <input type="checkbox" class="__checkbox __validate" name="consent">
+            <div class="__checkmark" aria-hidden="true"></div>  I consent to being
+            contacted by the team</label>
+          <p class="__missing">To submit this form, please consent to being contacted</p>
+        </div>
+
+        <div class="__submit"> <input type="submit" value="Submit" name="submit"></input></div>
+
+        <div class="__success">
+          <h2 class="flex"> <img src="./assets/images/icon-success-check.svg" alt=""> Message Sent!</h2>
+          <p>Thanks for completing the form. We'll be in touch soon!</p>
+          <p>In the mean time, a confirmation email has been sent to <span class="__email-conf"></span>.</p>
+        </div>
+
       </div>
       
-        <div class="__consent">
-          <label class="__checkboxlabel"> <input type="checkbox" class="__checkbox"> I consent to being contacted by the team</label>
-          <p class="__error" aria-hidden="true">To submit this form, please consent to being contacted</p>
-        </div>
-      
-       <div class="__submit"> <input type="submit" value="Submit"></input></div>
-      
-        <div class="__success">
-          Message Sent!
-          Thanks for completing the form. We'll be in touch soon!
-        </div>
-        
-      </form>
-  </section>
-</main>
+    </form>
+  </main>
   <footer class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
     Coded by <a href="http://jontesamuelsson.se">Jonatan Samuelsson</a>.
   </footer>
 </body>
+
 </html>

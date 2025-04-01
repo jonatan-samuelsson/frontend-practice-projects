@@ -33,7 +33,7 @@
 
     --body-lh: 1.5;
     --heading-lh: 1;
-    
+
 
 
 }
@@ -78,11 +78,11 @@ body {
     text-wrap-style: balance;
 } */
 
-p {
-    /* max-inline-size: 75ch;
-    text-wrap-style: pretty; */
+/* p {
+    max-inline-size: 75ch;
+    text-wrap-style: pretty;
     line-height: 1.6;
-}
+} */
 
 /* overall layouts */
 
@@ -111,22 +111,28 @@ body {
     min-height: 100svh;
     display: grid;
     place-items: center;
-    
+
 
 
 }
 
 .contactform {
+    position: relative;
+    margin-top: var(--big-gap);
     background-color: var(--clr-white);
     padding: var(--pad-bl) var(--pad-in);
-    gap: var(--big-gap);
+    column-gap: var(--big-gap);
     line-height: var(--body-lh);
 
     border-radius: 1rem;
 
     .__main {
         gap: var(--medium-gap);
-        
+
+    }
+
+    .__label {
+        display: block;
     }
 
     .__heading {
@@ -138,8 +144,30 @@ body {
         gap: var(--smaller-gap);
     }
 
+    .__input {
+        cursor: pointer;
+
+
+        &:hover {
+            outline: 1px solid var(--clr-green-600);
+        }
+
+        &:focus,
+        &:focus-within,
+        &:focus-visible,
+        &:active {
+            outline: 2px solid var(--clr-green-600);
+            background-color: var(--clr-green-200);
+
+        }
+
+
+    }
+
     .__roundedinput {
-        outline: inset 1px solid var(--clr-grey-500);
+        border: 1px solid var(--clr-grey-500);
+        border-radius: .5rem;
+        padding: .75rem 1.5rem;
     }
 
     .__required:after {
@@ -150,13 +178,286 @@ body {
 
     .__txtlabel {
         display: grid;
+        gap: var(--tiny-gap);
+
+        grid-template-rows: auto auto 1.5rem;
+
     }
 
-    .__radios {}
+    .__radioset {
+        border: none;
+        display: grid;
+        gap: var(--small-gap);
+
+
+    }
+
+    .__radiolabel {
+        position: relative;
+        display: flex;
+        gap: var(--small-gap);
+
+        cursor: pointer;
+
+        &:hover {
+            outline: 1px solid var(--clr-green-600);
+        }
+
+        .__checkmark {
+            position: absolute;
+            top: 50%;
+            left: var(--small-gap);
+            translate: 0 -50%;
+
+            display: grid;
+            place-items: center;
+
+            aspect-ratio: 1;
+            border-radius: 50%;
+            height: 40%;
+            border: 1px solid var(--clr-grey-500);
+        }
+
+        &:has(.__radio:focus, .__radio:focus-within, .__radio:focus-visible) {
+            outline: 2px solid var(--clr-green-600);
+            background-color: var(--clr-green-200);
+
+        }
+
+        &:has(> .__radio:checked) .__checkmark {
+            border: 1px solid var(--clr-green-600);
+
+            &::after {
+                content: "";
+                height: 70%;
+                border-radius: 50%;
+                aspect-ratio: 1;
+                background-color: var(--clr-green-600);
+            }
+        }
+
+
+
+        .__radio {
+            opacity: 0;
+
+        }
+
+
+
+
+
+
+
+    }
+
+    .__txtbx {
+        height: 8lh;
+
+        &:hover {
+            outline: 1px solid var(--clr-green-600);
+        }
+
+        &:focus,
+        &:focus-within,
+        &:focus-visible,
+        &:active {
+            outline: 2px solid var(--clr-green-600);
+            background-color: var(--clr-green-200);
+
+        }
+    }
+
+    .__checkboxlabel {
+        position: relative;
+
+        cursor: pointer;
+
+        .__checkbox {
+            opacity: 0;
+
+
+        }
+
+        .__checkmark {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            translate: -.25rem -50%;
+
+            display: grid;
+            place-items: center;
+
+            aspect-ratio: 1;
+            height: 80%;
+
+            border-radius: .2rem;
+            border: 1px solid var(--clr-grey-500);
+        }
+
+
+
+        &:has(.__checkbox:checked) .__checkmark {
+            border: 1px solid var(--clr-green-600);
+
+            &::after {
+                content: "";
+                height: 70%;
+
+                border-radius: .2rem;
+                aspect-ratio: 1;
+                background-color: var(--clr-green-600);
+            }
+        }
+
+        &:has(.__checkbox:focus, .__checkbox:active, .__checkbox:focus-within) .__checkmark {
+            outline: 2px solid var(--clr-green-600);
+            background-color: var(--clr-green-200);
+        }
+    }
+
+    .__submit input {
+        display: block;
+        background-color: var(--clr-green-600);
+        color: var(--clr-white);
+        font-weight: 700;
+
+        outline: none;
+        border: none;
+        border-radius: 1rem;
+        width: 100%;
+
+        padding: .75rem 1.5rem;
+
+        cursor: pointer;
+
+        &:hover {
+            background-color: color-mix(in oklab, var(--clr-green-600) 50%, #000 50%);
+        }
+    }
+
+}
+
+.__success {
+
+
+    position: absolute;
+    left: 50%;
+    top: calc(-1 * var(--small-gap));
+    translate: -50%;
+
+    background-color: color-mix(in oklab, var(--clr-green-600) 50%, #000 50%);
+    color: var(--clr-white);
+    box-shadow: 0 0 20px -3px #666;
+    padding: var(--pad-bl) var(--pad-in);
+
+    border-radius: 1rem;
+    width: 90%;
+
+    h2 {
+        gap: var(--small-gap);
+        font-size: var(--fs-body-m);
+        font-weight: 700;
+        margin-block-end: var(--small-gap);
+    }
+
+
+    transform: scaleY(0);
+    opacity: 0;
+    transform-origin: top;
+
+    transition: transform 600ms,
+    opacity 400ms 200ms;
+
+    &.__valid {
+
+        transform: scaleY(1);
+        opacity: 1;
+        transform-origin: top;
+
+        transition: transform 400ms 200ms, opacity 600ms;
+    }
 }
 
 
-
-.__error, .__success {
+.__error,
+.__missing {
     display: none;
+    color: var(--clr-red);
+}
+
+.__invalid:not(:is(.__radioset)),
+.__invalid-missing:not(:is(.__radioset)) {
+    outline: 1px solid var(--clr-red);
+}
+
+.__invalid ~ .__checkmark,
+.__invalid-missing ~ .__checkmark {
+    border: 1px solid var(--clr-red);
+}
+
+.__invalid-missing~.__missing,
+.__invalid-missing>.__missing,
+.__invalid-missing~div .__missing,
+.__invalid-missing>div .__missing {
+    display: block;
+}
+
+.__invalid~.__error,
+.__invalid>.__error,
+.__invalid~div .__error,
+.__invalid>div .__error {
+    display: block;
+}
+
+.__consent:has(.__invalid-missing) .__missing {
+    display:block;
+}
+
+.sucestest {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+@media screen and (width > 40rem) {
+    :root {
+
+        --pad-in: 2.5rem;
+        --pad-bl: 2.5rem;
+
+    }
+
+    .contactform {
+
+        width: min(90svw, 43.125rem);
+
+        .__main {
+
+
+
+            row-gap: var(--medium-gap);
+
+            .__inputs,
+            .__email,
+            .__radios,
+            .__form,
+            .__message,
+            .__consent,
+            .__submit {
+                grid-column: span 2;
+            }
+        }
+
+        .__success {
+            width: max-content;
+        }
+    }
+
+    @media screen and (width > 72rem) {
+        .contactform {
+            width: clamp(43.125rem, 51svw, 60rem);
+        }
+    }
+
 }
